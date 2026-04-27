@@ -1,0 +1,13 @@
+name: Node Setup
+on:
+  push:
+    branches: [main]
+
+jobs:
+  node-setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+      - name: Initialize Node
+        uses: actions/setup-node@v4
